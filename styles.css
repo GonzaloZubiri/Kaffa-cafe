@@ -1,0 +1,492 @@
+/*Google flonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*Css Reset*/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Monstserrat", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 65vh;
+    background-image: url(./assets/imagen-header2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/*Navegación*/
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    /* height: 100vh; */ /*Lo oculto para hacer el menu hamburguesa*/
+    height: 0vh;
+    top: 115px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s; 
+    background-image: url(./assets/imagen-header3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.nav-menu li {
+    /* display: block; */ /*Lo oculto para hacer el menu hamburguesa*/
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: rgb(248, 8, 8);
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 50vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+
+/*Texto banner*/
+
+.banner-text {
+    padding: 0 30px;
+    margin-top: 110px;
+    text-align: center;
+    color: rgb(177, 6, 6);
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner-text span {
+    color: rgb(248, 8, 8);
+}
+
+.banner-text h2 {
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(248, 8, 8);
+    font-family: 'Damion', cursive;
+}
+
+
+
+/*Responsive*/
+
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 10px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 18px;
+        color: #000;
+    }
+
+    .banner-text h1 {
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+
+    .banner-text h2 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 446px) {
+    .button1 {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .button2 {
+        display: inline-block;
+    }
+}
+
+/* Fin Header*/
+
+.container {
+    background-image: url(./assets/imagen-fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.section-nosotros {
+    display: flex;
+    flex-flow: column;
+}
+
+.nosotros {
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-family: 'Damion', cursive;
+    font-size: 50px;
+}
+
+.nosotros h3 {
+    font-family: 'Playfair Display', serif;
+    color: rgb(7, 7, 7);
+    font-size: 25px;
+}
+
+.nosotros p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 10px 20px 10px;
+    font-weight: bold;
+    background-color: rgba(132, 138, 138, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.buttons .button1 {
+    display: flex;
+    flex-flow: column;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 25px 80px;
+    background-color: rgb(248, 8, 8);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button1:hover {
+    background-color: #fff;
+    color: rgb(248, 8, 8);
+    transition: .5s;
+}
+
+.buttons .button2 {
+    display: flex;
+    flex-flow: column;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 25px 80px;
+    background-color: rgb(248, 8, 8);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button2:hover {
+    background-color: #fff;
+    color: rgb(248, 8, 8);
+    transition: .5s;
+}
+
+
+.imagen-nosotros img {
+    /* visibility: hidden; */
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .section-nosotros {
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 50px;
+        margin-top: 20px;
+    }
+
+    .nosotros {
+        width: 60%;
+    }
+
+    .imagen-nosotros img {
+        visibility: visible;
+        display: inline-block;
+        width: 80%;
+        padding: 10px;
+    }
+    .buttons {
+        flex-flow: row;
+    }
+
+    .button1, .button2  {
+        display: inline-block;
+    }
+}
+
+.container-history {
+    display: flex;
+    flex-flow: column;
+}
+
+.history {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.history h2 {
+    font-family: 'Damion', cursive;
+    font-size: 50px;
+}
+
+.history p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 10px 20px 10px;
+    font-weight: bold;
+    background-color: rgba(132, 138, 138, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Nuestros productos*/
+
+.product-section h2 {
+    font-family: 'Damion', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .container-product {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+.product {
+    display: flex;
+    border: 2px solid #757373;
+    width: 400px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: rgb(228, 231, 235);
+}
+
+
+.product:hover {
+    border: 2px solid #757373;
+    background-color: rgb(66, 44, 4);
+    color: #fff;
+}
+
+.foto {
+    width: 40%;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-product {
+    width: 60%;
+}
+
+.info-product h3 {
+    margin: 10px 0 5px 10px; 
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.info-product p {
+    margin: 5px 0 0 5px;
+}
+
+.info-product p span {
+    font-weight: bold;
+}
+
+
+/*Footer*/
+
+.footer {
+    width: 100%;
+    background-color: rgb(107, 106, 106);
+    overflow: hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .contenido-footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .contenido-footer {
+    margin: 5px;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .menu {
+      flex: 0 0 calc(30% - 10px);
+    }
+  }
+  
+  
+  .footer h5 {
+    display: block;
+    height: auto;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    margin-top: 15px;
+  }
+  
+  .footer ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .footer ul li {
+    margin-top: 10px;
+    padding: 5px;
+    
+  }
+  
+  
+  .footer iframe {
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .footer img {
+    margin-bottom: 15px;
+  }
+  
+  .footer .redes img {
+    width: 45px;
+  }
+  
+  @media (min-width: 768px) {
+    .footer {
+      height: auto;
+    }
+    .contenido-footer > div {
+      width: 100%;
+      margin: 0px auto;
+      margin-top: 20px;
+    }
+    .footer h5 {
+      font-size: 25px;
+    }
+  
+    .footer img {
+      margin-bottom: 15px;
+      max-width: 100%;
+    }
+  }
+
+  .desarrollado {
+      display: flex;
+      justify-content:space-evenly;
+      background-color: rgb(71, 70, 70);
+      align-items: center;
+      margin-bottom: 0px;
+  }
+
+  .logo-gonzalo {
+      display: flex;
+      align-items: center;
+      text-align: center;
+  }
+
+  .logo-gonzalo p {
+      color: black;
+      margin-left: 15px;
+      margin-right: 15px;
+  }
